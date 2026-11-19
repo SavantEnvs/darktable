@@ -1,0 +1,10 @@
+project: savantenvs/darktable
+target: gpx
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gpx/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_gpx
+    libfuzzer: true
+    timeout: 5

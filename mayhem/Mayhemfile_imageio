@@ -1,0 +1,10 @@
+project: savantenvs/darktable
+target: imageio
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/imageio/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_imageio
+    libfuzzer: true
+    timeout: 5
